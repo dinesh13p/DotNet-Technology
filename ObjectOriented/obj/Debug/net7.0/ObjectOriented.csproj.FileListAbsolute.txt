@@ -1,0 +1,14 @@
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/bin/Debug/net7.0/ObjectOriented
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/bin/Debug/net7.0/ObjectOriented.deps.json
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/bin/Debug/net7.0/ObjectOriented.runtimeconfig.json
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/bin/Debug/net7.0/ObjectOriented.dll
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/bin/Debug/net7.0/ObjectOriented.pdb
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net7.0/ObjectOriented.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net7.0/ObjectOriented.AssemblyInfoInputs.cache
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net7.0/ObjectOriented.AssemblyInfo.cs
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net7.0/ObjectOriented.csproj.CoreCompileInputs.cache
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net7.0/ObjectOriented.dll
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net7.0/refint/ObjectOriented.dll
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net7.0/ObjectOriented.pdb
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net7.0/ObjectOriented.genruntimeconfig.cache
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net7.0/ref/ObjectOriented.dll
