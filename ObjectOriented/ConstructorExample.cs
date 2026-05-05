@@ -34,7 +34,7 @@ namespace ObjectOriented
             // Console.WriteLine(Object.ReferenceEquals(s1, s2)); // True
 
 
-            Laptop laptop4 = new Laptop(16, "Acer", "EXTENSA 15", 67890);
+            Laptop? laptop4 = new Laptop(16, "Acer", "EXTENSA 15", 67890);
             laptop4 = null;
             GC.Collect(); // Force garbage collection to see the destructor in action
             GC.WaitForPendingFinalizers();// Wait for the finalizer to complete
@@ -75,8 +75,8 @@ namespace ObjectOriented
 
         class Singleton
         {
-            public string name;
-            private static Singleton instance;
+            public string name = string.Empty;
+            private static Singleton? instance;
 
             private Singleton(string name)
             {
