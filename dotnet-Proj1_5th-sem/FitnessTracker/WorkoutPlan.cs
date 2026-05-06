@@ -1,14 +1,36 @@
+// using System;
+// using FitnessTracker.Workout;  // add this
+
+
+// namespace FitnessTracker.Workout
+// {
+//     public class WorkoutPlan
+//     {
+//         public void Run()
+//         {
+//             Console.WriteLine("Lift the Dubmles. Stay Healthy.");
+//         }
+//     }
+// }
+
+
+
 using System;
-using FitnessTracker.Workout;  // add this
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace FitnessTracker.Workout
+namespace DotnetStruct.FitnessTracker
 {
-    public class WorkoutPlan
+    internal class WorkOutPlan
     {
-        public void Run()
+
+        public string exercise;
+        public string LogWorkout()
         {
-            Console.WriteLine("Lift the Dubmles. Stay Healthy.");
+            return "Exercise Logged: " + exercise;
         }
+
     }
 }
