@@ -12,3 +12,4 @@
 /Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net10.0/ObjectOriented.pdb
 /Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net10.0/ObjectOriented.genruntimeconfig.cache
 /Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net10.0/ref/ObjectOriented.dll
+/Users/dineshpoudel/Documents/5th_Semester/DotNet/ObjectOriented/obj/Debug/net10.0/ObjectOriented.sourcelink.json
