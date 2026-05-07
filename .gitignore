@@ -1,0 +1,27 @@
+# Build output
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Visual Studio / VS Code workspace artifacts
+.vs/
+**/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vsidx
+DocumentLayout.json
+DocumentLayout.backup.json
+
+# Rider / ReSharper
+*.DotSettings.user
+_ReSharper*/
+
+# NuGet packages folder (if locally used)
+packages/
+
+# OS metadata
+.DS_Store
+**/.DS_Store
