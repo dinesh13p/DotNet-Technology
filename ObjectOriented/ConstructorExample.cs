@@ -1,94 +1,102 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjectOriented
 {
     internal class ConstructorExample
     {
-        public void run()
+        public void Run()
         {
-            // Laptop laptop = new Laptop();
-            // var s = Laptop.manufacturer;
-            // Console.WriteLine(s);
-            // //Console.WriteLine(laptop.ramSize);
+            // Default constructor
+            var l1 = new Laptop();
+            Console.WriteLine("Default Constructor:");
+            l1.Display();
 
-            // Laptop laptop1 = new Laptop(laptop);
-            // Console.WriteLine(laptop1.ramSize);
+            // Parameterized constructor
+            var l2 = new Laptop(16, "Dell XPS", 101);
+            Console.WriteLine("\nParameterized Constructor:");
+            l2.Display();
 
-            // Laptop laptop2 = new Laptop(16, "Air M4", 54321);
-            // Laptop laptop3 = new Laptop(laptop2);
+            // Copy constructor
+            var l3 = new Laptop(l2);
+            Console.WriteLine("\nCopy Constructor:");
+            l3.Display();
 
-            // Console.WriteLine(laptop3.ramSize);
+            // Static field
+            Console.WriteLine($"\nManufacturer: {Laptop.Manufacturer}");
 
+            // Singleton usage
+            Console.WriteLine("\nSingleton Example:");
+            var s1 = Singleton.Instance;
+            var s2 = Singleton.Instance;
 
+            Console.WriteLine(
+                s1 == s2
+                ? "Both instances are the SAME (Singleton works)"
+                : "Different instances (Error)"
+            );
+        }
+    }
 
-            // Singleton s1 = Singleton.getInstance();
-            // Singleton s2 = Singleton.getInstance();
+    internal class Laptop
+    {
+        // Static property
+        public static string Manufacturer { get; }
 
-            // s1.name = "Dinesh Poudel";         
-            // Console.WriteLine(s1.name);         // "Dinesh Poudel"
-            // Console.WriteLine(s2.name);         // same — s1 and s2 are the same object
-            // Console.WriteLine(Object.ReferenceEquals(s1, s2)); // True
+        // Properties (cleaner than public fields)
+        public int RamSize { get; }
+        public string ModelName { get; }
+        public int SerialNumber { get; }
 
-
-            Laptop? laptop4 = new Laptop(16, "Acer", "EXTENSA 15", 67890);
-            laptop4 = null;
-            GC.Collect(); // Force garbage collection to see the destructor in action
-            GC.WaitForPendingFinalizers();// Wait for the finalizer to complete
+        // Static constructor
+        static Laptop()
+        {
+            Manufacturer = "Dell";
         }
 
-        class Laptop
+        // Default constructor
+        public Laptop()
         {
-            public static string manufacturer;
-            public int ramSize;
-            public string modelName;
-            public readonly int serialNumber;
-
-            static Laptop()
-            {
-                Console.WriteLine("Static constructor called");
-                manufacturer = "MacBook";
-            }
-            public Laptop()
-            {
-                Console.WriteLine("Instance constructor called");
-                ramSize = 16;
-                modelName = "Air M4";
-                serialNumber = 12345;
-            }
-            public Laptop(int ramSize, string modelName, string modelNumber, int serialNumber)
-            {
-                this.ramSize = ramSize;
-                this.modelName = modelName;
-                this.serialNumber = serialNumber;
-            }
-            public Laptop(Laptop existingLaptop)
-            {
-                ramSize = existingLaptop.ramSize;
-                modelName = existingLaptop.modelName;
-                serialNumber = existingLaptop.serialNumber;
-            }
+            RamSize = 0;
+            ModelName = "Unknown";
+            SerialNumber = 0;
         }
 
-        class Singleton
+        // Parameterized constructor
+        public Laptop(int ramSize, string modelName, int serialNumber)
         {
-            public string name = string.Empty;
-            private static Singleton? instance;
-
-            private Singleton(string name)
-            {
-                this.name = name;
-            }
-
-            public static Singleton getInstance()
-            {
-                if (instance == null)
-                    instance = new Singleton("Singleton Instance");
-                return instance;
-            }
+            RamSize = ramSize;
+            ModelName = modelName;
+            SerialNumber = serialNumber;
         }
+
+        // Copy constructor
+        public Laptop(Laptop existing)
+        {
+            RamSize = existing.RamSize;
+            ModelName = existing.ModelName;
+            SerialNumber = existing.SerialNumber;
+        }
+
+        // Destructor
+        ~Laptop()
+        {
+            Console.WriteLine($"Destructor called for: {ModelName}");
+        }
+
+        public void Display()
+        {
+            Console.WriteLine($"Model: {ModelName}, RAM: {RamSize}GB, Serial: {SerialNumber}");
+        }
+    }
+
+    // Singleton (thread-safe)
+    internal sealed class Singleton
+    {
+        private static readonly Singleton instance = new Singleton();
+
+        // Private constructor
+        private Singleton() { }
+
+        public static Singleton Instance => instance;
     }
 }

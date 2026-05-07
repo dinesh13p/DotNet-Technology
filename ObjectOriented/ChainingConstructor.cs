@@ -1,16 +1,5 @@
 using System;
 
-
-/*
-    Class task:
-    Create a Student class with:
-    Name and Grade properties.
-    Constructor1 = that takes only name and grade
-    Constructor2 = that takes only name [ sets grade to "Not assigned" using constructor chaining.]
-    A method to display student information.
-*/
-
-
 namespace ObjectOriented
 {
     public class Student
