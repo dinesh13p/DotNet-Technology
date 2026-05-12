@@ -23,8 +23,11 @@ namespace ObjectOriented
             // var IndexerExample = new IndexerExample();
             // IndexerExample.run();
 
-            var staticExample = new StaticExample();
-            staticExample.Run();
+            // var staticExample = new StaticExample();
+            // staticExample.run();
+
+            var InheritanceExample = new InheritanceExample();
+            InheritanceExample.run();
         }
     }
 }
