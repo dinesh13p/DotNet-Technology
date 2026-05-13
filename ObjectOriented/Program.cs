@@ -1,5 +1,4 @@
 using System;
-using OOP;
 
 namespace ObjectOriented
 {
@@ -21,13 +20,19 @@ namespace ObjectOriented
 
 
             // var IndexerExample = new IndexerExample();
-            // IndexerExample.run();
+            // IndexerExample.Run();
 
             // var staticExample = new StaticExample();
-            // staticExample.run();
+            // staticExample.Run();
 
-            var InheritanceExample = new InheritanceExample();
-            InheritanceExample.run();
+            // var InheritanceExample = new InheritanceExample();
+            // InheritanceExample.Run();
+
+            // var OverLoadingExample = new OverLoadingExample();
+            // OverLoadingExample.Run();
+
+            var OverRidingExample = new OverRidingExample();
+            OverRidingExample.Run();
         }
     }
 }

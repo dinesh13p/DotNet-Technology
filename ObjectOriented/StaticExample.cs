@@ -30,7 +30,7 @@ namespace OOP
     }
     class Laptop1
     {
-        public static string manufacturer;
+        public static string manufacturer = string.Empty;
         public int ramSize;
 
         public Laptop1()

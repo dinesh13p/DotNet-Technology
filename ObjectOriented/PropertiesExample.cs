@@ -19,7 +19,7 @@ namespace ObjectOriented
     }
 
     public class Person {
-        private String name;
+        private String name = string.Empty;
         public String Name
         {
             get { return name; } 

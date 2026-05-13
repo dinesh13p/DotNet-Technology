@@ -29,7 +29,7 @@ namespace ObjectOriented
 
     public class BankAccount
     {
-        private string accountHolderName;
+        private string accountHolderName = string.Empty;
         private int accountId;
         private double balance;
 
