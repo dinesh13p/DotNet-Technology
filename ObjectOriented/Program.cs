@@ -31,8 +31,11 @@ namespace ObjectOriented
             // var OverLoadingExample = new OverLoadingExample();
             // OverLoadingExample.Run();
 
-            var OverRidingExample = new OverRidingExample();
-            OverRidingExample.Run();
+            // var OverRidingExample = new OverRidingExample();
+            // OverRidingExample.Run();
+
+            var AbstractionExample = new AbstractionExample();
+            AbstractionExample.Run();
         }
     }
 }
