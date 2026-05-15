@@ -15,7 +15,7 @@ namespace ObjectOriented
 
     class Vehicles
     {
-        public string name;
+        // public string Name;
         public virtual void Start()
         {
             Console.WriteLine("Vehicle Started");
@@ -29,13 +29,6 @@ namespace ObjectOriented
         public override void Start()
         {
             Console.WriteLine("Electric Vehicle Started");
-        }
-
-        public void Drive()
-        {
-        }
-        public void Charge()
-        {
         }
     }
 }
