@@ -37,8 +37,11 @@ namespace ObjectOriented
             // var AbstractionExample = new AbstractionExample();
             // AbstractionExample.Run();
 
-            var InterfaceExample = new InterfaceExample();
-            InterfaceExample.Run();
+            // var InterfaceExample = new InterfaceExample();
+            // InterfaceExample.Run();
+
+            var OperatorOverloadingExample = new OperatorOverloadingExample();
+            OperatorOverloadingExample.Run();
         }
     }
 }
