@@ -40,8 +40,11 @@ namespace ObjectOriented
             // var InterfaceExample = new InterfaceExample();
             // InterfaceExample.Run();
 
-            var OperatorOverloadingExample = new OperatorOverloadingExample();
-            OperatorOverloadingExample.Run();
+            // var OperatorOverloadingExample = new OperatorOverloadingExample();
+            // OperatorOverloadingExample.Run();
+
+            var GenericExample = new GenericExample();
+            GenericExample.Run();
         }
     }
 }
