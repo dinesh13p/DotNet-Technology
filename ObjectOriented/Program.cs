@@ -43,8 +43,8 @@ namespace ObjectOriented
             // var OperatorOverloadingExample = new OperatorOverloadingExample();
             // OperatorOverloadingExample.Run();
 
-            var GenericExample = new GenericExample();
-            GenericExample.Run();
+            // var GenericExample = new GenericExample();
+            // GenericExample.Run();
         }
     }
 }
