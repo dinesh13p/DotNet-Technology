@@ -33,9 +33,9 @@ namespace AdvancedCSharp
             };
 
             var response = from product in products
-                           where product.IsActive == true
-                           orderby product.Price descending
-                           select product.Name;
+                        where product.IsActive == true
+                        orderby product.Price descending
+                        select product.Name;
 
             foreach (var item in response)
             {
