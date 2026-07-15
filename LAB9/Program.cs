@@ -35,7 +35,7 @@ namespace SQLConnectionExample
                     LoopAndDisplayRows(employeeTable);
 
                     // 2. Update Data in memory
-                    string targetName = "David Miller"; // Example target
+                    string targetName = "Dinesh Poudel"; // Example target
                     bool employeeFound = false;
 
                     foreach (DataRow row in employeeTable.Rows)
