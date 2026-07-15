@@ -1,9 +1,9 @@
 using System;
-using Microsoft.Data.SqlClient; // Note: Use System.Data.SqlClient if on older .NET Framework
+using MySql.Data.MySqlClient;
 
 class LabTask8
 {
-    private static string connectionString = "Server=YOUR_SERVER;Database=YOUR_DB;Trusted_Connection=True;TrustServerCertificate=True;";
+    private static string connectionString = "Server=localhost;Port=3306;Database=bca_fifth;Uid=root;Pwd=;";
 
     static void Main()
     {
@@ -13,7 +13,7 @@ class LabTask8
 
         // Execute Task 2: Insert Data
         Console.WriteLine("\n--- Inserting New Employee ---");
-        InsertEmployee("David Miller", 65000, "IT", false, 4);
+        InsertEmployee("Dinesh Poudel", 65000, "IT", false, 4);
 
         // Verify insertion by running retrieval again
         Console.WriteLine("\n--- Retrieving Active Employees After Insertion ---");
@@ -25,18 +25,17 @@ class LabTask8
     {
         string query = "SELECT Name, Salary FROM Employee WHERE IsResigned = 0";
 
-        using (SqlConnection connection = new SqlConnection(connectionString))
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
         {
-            SqlCommand command = new SqlCommand(query, connection);
-            
+            MySqlCommand command = new MySqlCommand(query, connection);
+
             try
             {
                 connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+                using (MySqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        // Displaying Name and Salary
                         string name = reader["Name"].ToString();
                         double salary = Convert.ToDouble(reader["Salary"]);
                         Console.WriteLine($"Name: {name}, Salary: ${salary}");
@@ -56,11 +55,10 @@ class LabTask8
         string query = "INSERT INTO Employee (Name, Salary, Department, IsResigned, Experience) " +
                        "VALUES (@Name, @Salary, @Department, @IsResigned, @Experience)";
 
-        using (SqlConnection connection = new SqlConnection(connectionString))
+        using (MySqlConnection connection = new MySqlConnection(connectionString))
         {
-            SqlCommand command = new SqlCommand(query, connection);
+            MySqlCommand command = new MySqlCommand(query, connection);
 
-            // Adding parameters to prevent SQL Injection
             command.Parameters.AddWithValue("@Name", name);
             command.Parameters.AddWithValue("@Salary", salary);
             command.Parameters.AddWithValue("@Department", department);
